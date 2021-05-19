@@ -1,0 +1,7 @@
+.container {
+  width: 90%;
+  max-width: 1160px;
+  height: inherit;
+  margin: 0 auto;
+  position: relative;
+}
