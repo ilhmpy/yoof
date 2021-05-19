@@ -5,3 +5,134 @@
   transform: rotateX(-21.8deg);
   margin-top: -470px;
 }
+
+.yoof__banner_inner {
+  width: 100%;
+  height: 100%;
+  padding-top: 596px;
+}
+
+.banner_inner__search_box {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background: #F8F8F8;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.banner_inner__search_box > img {
+  position: absolute;
+  color: #909090;
+  margin-top: 22px;
+  margin-left: 19px;
+}
+
+.banner_inner__search_input {
+  width: 84%;
+  line-height: 10px;
+  height: inherit;
+}
+
+.banner_inner__search_input {
+  padding-left: 60px;
+}
+
+.banner_inner__search_input::placeholder {
+  padding-top: -10px;
+  user-select: none;
+  color: #909090;
+  font-weight: 400;
+  font-size: .80em;
+}
+
+.banner_inner__search_btn {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  width: 200px;
+  background: #EBF005;
+  border-radius: 10px;
+  height: inherit;
+  font-weight: 700;
+  font-size: .70em;
+  letter-spacing: 0.1em;
+  line-height: 21px;
+}
+
+.banner_inner__banner {
+  width: 100%;
+}
+
+.banner_inner__add_filter {
+  color: #fff;
+  font-size: .65em;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  float: right;
+  margin-right: 7px;
+  position: relative;
+}
+
+.banner_inner__add_filter > img {
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.banner_inner__banner {
+  width: 100%;
+  height: 434px;
+  display: flex;
+}
+
+.inner_banner__text_box {
+  width: 50%;
+  height: inherit;
+}
+
+.text_box__title {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  display: block;
+  width: 88%;
+  font-weight: bold;
+  font-size: 2.80em;
+  line-height: 124.68%;
+  letter-spacing: 2%;
+  max-width: 516px;
+  height: 200px;
+  border-bottom: 3px solid #EBF005;
+}
+
+.text_box__text {
+  font-weight: 400;
+  font-size: .70em;
+  line-height: 22px;
+  color: #fff;
+  width: 67%;
+}
+
+.inner_banner__btn {
+  width: 200px;
+  height: 60px;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: .70em;
+  border-radius: 10px;
+  background: #EBF005;
+
+}
+
+.inner_banner__img_box {
+  width: 50%;
+  height: inherit;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+  .yoof__banner {
+    transform: rotateX(-20.49deg);
+  }
+}

@@ -1,7 +1,46 @@
+body {
+  overflow-x: hidden;
+}
+
+input, button {
+  border: 0;
+  background: 0;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 90%;
   max-width: 1160px;
   height: inherit;
   margin: 0 auto;
   position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.focusable--btns {
+  transition: .30s;
+}
+
+.focusable--btns:hover {
+  background: #EFF30A;
+}
+
+.focusable--btns:focus {
+  background: #FAFF00;
+}
+
+@media only screen and (max-device-width: 1025px) {
+  .container {
+    width: 96%;
+  }
 }
