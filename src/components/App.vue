@@ -41,7 +41,14 @@
             </div>
           </div>
           <div class="inner__banner__texts_about">
-            <article class="texts_about__text"></article>
+            <article class="texts_about__text">
+              <h3>Устали от поиска нужного товара по выгодной для вас цене?</h3>
+              <h3 class="about__text_item">Обошли десятки магазинов и просмотрели сотни страниц в интернете?</h3>
+            </article>
+            <article class="texts_about__text">
+              <h3>На YOOF, продавцы сами готовы предложить вам самую низкую цену. Достаточно просто сообщить им какой товар вы хотите купить,
+              и ... запустить аукцион.</h3>
+            </article>
           </div>
         </div>
       </main>

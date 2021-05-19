@@ -8,13 +8,14 @@
 
 .yoof__banner_inner {
   width: 100%;
-  height: 100%;
+  height: 881px;
   padding-top: 596px;
 }
 
 .banner_inner__search_box {
   width: 100%;
   height: 60px;
+  margin-bottom: 68px;
   border-radius: 10px;
   background: #F8F8F8;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -60,10 +61,6 @@
   line-height: 21px;
 }
 
-.banner_inner__banner {
-  width: 100%;
-}
-
 .banner_inner__add_filter {
   color: #fff;
   font-size: .65em;
@@ -83,8 +80,9 @@
 
 .banner_inner__banner {
   width: 100%;
-  height: 434px;
+  height: 479px;
   display: flex;
+  margin-bottom: 20px;
 }
 
 .inner_banner__text_box {
@@ -130,9 +128,108 @@
   height: inherit;
 }
 
+.inner__banner__texts_about {
+  display: flex;
+  width: 100%;
+  height: 213px;
+  margin-top: 50px;
+}
+
+.texts_about__text {
+  color: #EBF005;
+  font-weight: 200;
+  font-size: .70em;
+  display: block;
+  width: 50%;
+  height: inherit;
+}
+
+.about__text_item {
+  text-align: center;
+}
+
+.texts_about__text:nth-child(2) {
+  color: #1F670C;
+  text-align: right;
+  margin-top: 72px;
+}
+
 
 @media only screen and (max-device-width: 480px) {
   .yoof__banner {
     transform: rotateX(-20.49deg);
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  .banner_inner__search_input {
+    padding-left: 52px;
+  }
+
+  .banner_inner__search_input::placeholder {
+    font-size: .70em;
+  }
+
+  .inner_banner__img_box > img {
+    width: 382px;
+    height: 271px;
+    margin-top: 63px;
+  }
+
+  .text_box__title {
+    font-size: 1.90em;
+    height: 121px;
+    width: 76%;
+  }
+
+  .inner__banner__texts_about {
+    margin-top: 0px;
+  }
+
+  .yoof__banner {
+    height: 1469px;
+  }
+
+  .banner_inner__banner {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-device-width: 1440px) {
+  .text_box__title {
+    width: 71%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .banner_inner__banner {
+    display: block;
+  }
+
+  .inner_banner__img_box > img {
+    width: 289px;
+    height: 204px;
+  }
+
+  .text_box__title {
+    font-size: .30em;
+  }
+
+  .banner_inner__search_input {
+    width: 55%;
+    padding-left: 10px;
+    autosize-input: 10px;
+  }
+
+  .banner_inner__search_input {
+    font-size: .70em;
+  }
+
+  .banner_inner__search_input::placeholder {
+    word-wrap: wrap;
+  }
+
+  .banner_inner__search_btn {
+    width: 130px;
   }
 }
