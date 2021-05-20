@@ -292,9 +292,7 @@
   .inner_banner__btn--addaptive_version {
     display: block;
   }
-}
 
-@media only screen and (min-device-width: 380px) and (max-device-width: 480px) {
   .banner_inner__add_filter {
     margin-top: 77px;
   }

@@ -61,10 +61,10 @@
           <p class="yoof__about">Помогаем покупателям и продавцам электроники находить друг друга</p>
         </article>
         <div class="about_slider__arrow">
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right" data-arrow="right"></i>
         </div>
         <div class="about_slider__arrow">
-          <i class="fas fa-chevron-left"></i>
+          <i class="fas fa-chevron-left" data-arrow="left"></i>
         </div>
         <div class="about_slider__cards">
           <div class="about_slider__cards_truck">
@@ -76,9 +76,72 @@
                   <span class="slider_card__title">РЕГИСТРАЦИЯ</span>
                 </div>
                 <p class="slider_card__text">Зарегистрируйтесь, или войдите в свой личный кабинет</p>
-                <div class="slider_card__btns">
+                <div class="slider_card__btns focusable--btns">
                   <button type="button" name="button" class="slider_card__btn">ВХОД</button>
                   <button type="button" name="button" class="slider_card__btn">РЕГИСТРАЦИЯ</button>
+                </div>
+              </div>
+            </div>
+            <div class="about_slider__card">
+              <div class="slider_card__img search_card"></div>
+              <div class="slider_card__text_box">
+                <div class="slider_card__title_box">
+                  <span class="slider_card__number">02</span>
+                  <span class="slider_card__title" id="search__title">ПОИСК</span>
+                </div>
+                <p class="slider_card__text" id="search__text">
+                    Введите в форму поиска модель нужного вам товара, или подберите его при помощи наших умных фильтров
+                </p>
+                <div class="slider_card__btns focusable--btns" id="search__btns">
+                  <button type="button" name="button" class="slider_card__btn" id="search__btn">НАЧАТЬ ПОДБОР</button>
+                </div>
+              </div>
+            </div>
+            <div class="about_slider__card">
+              <div class="slider_card__img auction_card"></div>
+              <div class="slider_card__text_box">
+                <div class="slider_card__title_box">
+                  <span class="slider_card__number">03</span>
+                  <span class="slider_card__title" id="search__title">ПРЕДЛОЖЕНИЕ</span>
+                </div>
+                <p class="slider_card__text" id="auction__text">
+                    Поздравляем, вы почти у цели. Ваша заявка отправлена нашим партнёрам, которые готовы предложить вам лучшую цену.
+                    Вы можете видеть сколько продавцов выразили заинтересованность поторговаться, снижая цену на интересующий вас товар
+                </p>
+                <div class="slider_card__btns focusable--btns" id="search__btns">
+                  <button type="button" name="button" class="slider_card__btn" id="search__btn">ЗАПУСТИТЬ АУКЦИОН</button>
+                </div>
+              </div>
+            </div>
+            <div class="about_slider__card">
+              <div class="slider_card__img paid_card"></div>
+              <div class="slider_card__text_box">
+                <div class="slider_card__title_box">
+                  <span class="slider_card__number">04</span>
+                  <span class="slider_card__title" id="search__title">ОПЛАТА</span>
+                </div>
+                <p class="slider_card__text" id="paid_text">
+                    Для запуска аукциона, вам нужно внести необходимую сумму, обычно это минимальная цена
+                    на вашу модель, найденная в интернет-магазинах. После того как вы запустите аукцион, продавцы начнут торги
+                </p>
+                <div class="slider_card__btns focusable--btns" id="search__btns">
+                  <button type="button" name="button" class="slider_card__btn" id="search__btn">МОИ ТОРГИ</button>
+                </div>
+              </div>
+            </div>
+            <div class="about_slider__card">
+              <div class="slider_card__img result_card"></div>
+              <div class="slider_card__text_box">
+                <div class="slider_card__title_box">
+                  <span class="slider_card__number">05</span>
+                  <span class="slider_card__title" id="search__title">РЕЗУЛЬТАТ</span>
+                </div>
+                <p class="slider_card__text" id="paid_text">
+                    Ура!!! Торги завершились. Вы можете быть уверены, что купили свой товар по самой лучшей цене.
+                    Вам остаётся только дождаться, когда вам привезут вашу покупку
+                </p>
+                <div class="slider_card__btns focusable--btns" id="search__btns">
+                  <button type="button" name="button" class="slider_card__btn" id="search__btn">МОИ ЗАКАЗЫ</button>
                 </div>
               </div>
             </div>
@@ -95,6 +158,37 @@
     name: 'yoof'
   }
 
+  window.addEventListener("load", e => {
+    const width = document.querySelector(".about_slider__card").offsetWidth;
+    const truck = document.querySelector(".about_slider__cards_truck");
+    const countCards = 1;
+    const move = countCards * width;
+    const maxTranslate = -5200;
+
+    let position = 0;
+
+    function translate() {
+      if (position === maxTranslate) {
+        position = 0;
+        truck.style.transition = "0.1s";
+      } else truck.style.transition = "0.5s";
+
+      if (position === 1040) position = 0;
+      truck.style.transform = `translateX(${position}px)`;
+    };
+
+    document.querySelectorAll(".about_slider__arrow").forEach(arrow => arrow.addEventListener("click", e => {
+      if (e.target.dataset.arrow == "right") {
+        position -= move;
+        translate();
+      };
+
+      if (e.target.dataset.arrow == "left") {
+        position += move;
+        translate();
+      };
+    }));
+  })
 </script>
 
 <style src="normalize.css/normalize.css"></style>
