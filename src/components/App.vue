@@ -153,10 +153,23 @@
           </div>
         </div>
       </main>
-      <main class="yoof__ourpartners">
-        <main class="container ourpartners__container">
-          
-        </main>
+    </main>
+    <main class="yoof__ourpartners">
+      <main class="container ourpartners__container">
+        <div class="ourpartners__text_box">
+          <h1 class="ourpartners__title">НАШИ ПАРТНЕРЫ</h1>
+          <p class="ourpartners__text">Мы сотрудничаем с самыми популярными брендами</p>
+        </div>
+        <div class="ourpartners__companies_cards">
+          <div class="companies_cards__truck">
+            <img src="./static/Samsung.svg" alt="samsung" class="cards_truck__item">
+            <img src="./static/Apple.svg" alt="apple" class="cards_truck__item">
+            <img src="./static/Indesit.svg" alt="indesit" class="cards_truck__item">
+            <img src="./static/LG.svg" alt="lg" class="cards_truck__item">
+            <img src="./static/ASUS.svg" alt="asus" class="cards_truck__item">
+            <img src="./static/BEKO.svg" alt="beko" class="cards_truck__item">
+          </div>
+        </div>
       </main>
     </main>
   </section>
@@ -203,10 +216,6 @@
 
 <style src="normalize.css/normalize.css"></style>
 <style src="./ComponentsStyles/app.css"></style>
-<style src="./ComponentsStyles/header.css"></style>
-<style src="./ComponentsStyles/banner.css"></style>
-<style src="./ComponentsStyles/aboutSlider.css"></style>
-<style src="./ComponentsStyles/ourPartners.css"></style>
 
 <style>
     .yoof {
