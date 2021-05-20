@@ -565,12 +565,15 @@ a {
   width: 100%;
   height: inherit;
   display: flex;
+  transition: 0.5s;
 }
 
 .cards_truck__item {
   width: 150px;
   margin-right: 20px;
   height: inherit;
+  user-select: none;
+  pointer-events: none;
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
@@ -939,8 +942,55 @@ a {
 }
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
-  .companies_cards__truck {
-    flex-grow: 3;
-    flex-direction: column;
+  .cards_truck__item {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (max-device-width: 599px) {
+  .ourpartners__companies_cards {
+    overflow: hidden;
+  }
+
+  .yoof__ourpartners__title {
+    width: 100%;
+    max-width: 414px;
+  }
+
+  .ourpartners__title {
+    width: 84%;
+    font-size: 1.45em;
+  }
+
+  .yoof__ourpartners {
+    background: url("../static/ourpartners__bg--addaptive.svg");
+    height: 400px;
+  }
+
+  .ourpartners__text_box {
+    width: 100%;
+  }
+
+  .ourpartners__text {
+    text-align: center;
+  }
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 366px) {
+  .ourpartners__title {
+    width: 94%;
+  }
+}
+
+@media only screen and (min-device-width: 420px) and (max-device-width: 480px) {
+  .ourpartners__title {
+    width: 74%;
+  }
+}
+
+@media only screen and (min-device-width: 450px) and (max-device-width: 480px) {
+  .ourpartners__title {
+    width: 66%;
   }
 }

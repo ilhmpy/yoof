@@ -177,6 +177,7 @@
 
 <script>
   import "./fonts/FontAwesome/css/font-awesome.min.css";
+
   export default {
     name: 'yoof'
   }
@@ -187,8 +188,18 @@
     const countCards = 1;
     const move = countCards * width;
     const maxTranslate = -5200;
+    const companiesCardsTruck = document.querySelector(".companies_cards__truck");
 
+    let moveCompanies = false;
     let position = 0;
+    let initialPosition = 0;
+    let positionX1 = 0;
+    let positionX2 = 0;
+    let transform = 0;
+    let finalPosition = 0;
+    let regPx = /[-0-9.]+(?=px)/;
+
+    companiesCardsTruck.style.transform = "translate3d(0px, 0px, 0px)";
 
     function translate() {
       if (position === maxTranslate) {
@@ -211,7 +222,34 @@
         translate();
       };
     }));
-  })
+
+    document.addEventListener("touchstart", touchStart);
+
+    function touchMove(e) {
+      if (moveCompanies) {
+        transform = companiesCardsTruck.style.transform.match(regPx)[0];
+        positionX2 = positionX1 - e.touches[0].clientX;
+        positionX1 = e.touches[0].clientX;
+        companiesCardsTruck.style.transform = `translate3d(${transform - positionX2}px, 0px, 0px)`;
+      };
+    };
+
+    function touchStart(e) {
+      initialPosition = e.touches[0].pageX;
+      initialPosition = positionX1 = e.touches[0].clientX;
+
+      moveCompanies = true;
+      document.addEventListener("touchmove", touchMove);
+      document.addEventListener("touchend", touchEnd);
+    };
+
+    function touchEnd(e) {
+      moveCompanies = false;
+      finalPosition = companiesCardsTruck.style.transform.match(regPx)[0];
+      document.removeEventListener("touchmove", touchMove);
+      document.removeEventListener("touchend", touchEnd);
+    };
+  });
 </script>
 
 <style src="normalize.css/normalize.css"></style>
