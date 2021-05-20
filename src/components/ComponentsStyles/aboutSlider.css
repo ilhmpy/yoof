@@ -1,0 +1,143 @@
+.yoof__about_slider {
+  width: 100%;
+  height: 630px;
+}
+
+.about_slider__container {
+  position: relative;
+}
+
+.about_slider__text {
+  max-width: 748px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 130px;
+}
+
+.yoof__title {
+  font-family: Oswald;
+  line-height: 66px;
+  width: 55%;
+  margin: 0 auto;
+  border-bottom: 3px solid #EBF005;
+}
+
+.yoof__about {
+  font-weight: 600;
+  font-size: .80em;
+  text-align: center;
+}
+
+.about_slider__cards {
+  width: 100%;
+  max-width: 1040px;
+  height: 310px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+.about_slider__cards_truck {
+  width: 100%;
+  height: inherit;
+  display: flex;
+}
+
+.about_slider__arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: #EBF005;
+  border-radius: 50%;
+  margin-top: 142px;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.about_slider__arrow:nth-child(2) {
+  right: 0;
+}
+
+.about_slider__card {
+  width: 100%;
+  display: flex;
+  height: inherit;
+  background: #FFFFFF;
+  padding: 30px;
+}
+
+.slider_card__img {
+  width: 30%;
+  max-width: 310px;
+  height: 250px;
+}
+
+.slider_card__text_box {
+  width: 70%;
+  padding-left: 30px;
+  height: 250px;
+}
+
+.registration_card {
+  background: url("../static/registration_card.svg") center no-repeat;
+}
+
+.slider_card__title_box {
+  width: 100%;
+  padding-top: 2px;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+.slider_card__number {
+  color: #1D8C00;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -4px;
+  user-select: none;
+}
+
+.slider_card__title {
+  position: absolute;
+  width: 163px;
+  height: 26px;
+  background: #fff;
+  font-weight: bold;
+  margin-top: 22px;
+  margin-left: -11px;
+  line-height: 25px;
+}
+
+.slider_card__text {
+  font-weight: 550;
+  width: 300px;
+  margin-bottom: 68px;
+  font-size: .70em;
+}
+
+.slider_card__btns {
+  display: flex;
+  width: 278px;
+  height: 60px;
+
+  background: #EBF005;
+  border-radius: 10px;
+}
+
+.slider_card__btn {
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  height: inherit;
+  font-weight: bold;
+  line-height: 21px;
+  font-size: .70em;
+}
+
+.slider_card__btn:nth-child(1) {
+  width: 40%;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+}

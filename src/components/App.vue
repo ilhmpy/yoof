@@ -39,6 +39,7 @@
             <div class="inner_banner__img_box">
               <img src="./static/banner.svg" alt="banner">
             </div>
+            <button class="inner_banner__btn inner_banner__btn--addaptive_version focusable--btns">О СЕРВИСЕ</button>
           </div>
           <div class="inner__banner__texts_about">
             <article class="texts_about__text">
@@ -53,6 +54,38 @@
         </div>
       </main>
     </main>
+    <main class="yoof__about_slider">
+      <main class="container about_slider__container">
+        <article class="about_slider__text">
+          <h1 class="yoof__title">КАК ЭТО РАБОТАЕТ?</h1>
+          <p class="yoof__about">Помогаем покупателям и продавцам электроники находить друг друга</p>
+        </article>
+        <div class="about_slider__arrow">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="about_slider__arrow">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="about_slider__cards">
+          <div class="about_slider__cards_truck">
+            <div class="about_slider__card">
+              <div class="slider_card__img registration_card"></div>
+              <div class="slider_card__text_box">
+                <div class="slider_card__title_box">
+                  <span class="slider_card__number">01</span>
+                  <span class="slider_card__title">РЕГИСТРАЦИЯ</span>
+                </div>
+                <p class="slider_card__text">Зарегистрируйтесь, или войдите в свой личный кабинет</p>
+                <div class="slider_card__btns">
+                  <button type="button" name="button" class="slider_card__btn">ВХОД</button>
+                  <button type="button" name="button" class="slider_card__btn">РЕГИСТРАЦИЯ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </main>
   </section>
 </template>
 
@@ -61,12 +94,14 @@
   export default {
     name: 'yoof'
   }
+
 </script>
 
 <style src="normalize.css/normalize.css"></style>
 <style src="./ComponentsStyles/app.css"></style>
 <style src="./ComponentsStyles/header.css"></style>
 <style src="./ComponentsStyles/banner.css"></style>
+<style src="./ComponentsStyles/aboutSlider.css"></style>
 
 <style>
     .yoof {

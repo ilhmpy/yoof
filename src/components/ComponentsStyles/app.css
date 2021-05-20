@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 input, button {
   border: 0;
   background: 0;
