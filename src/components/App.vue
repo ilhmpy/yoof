@@ -76,9 +76,10 @@
                   <span class="slider_card__title">РЕГИСТРАЦИЯ</span>
                 </div>
                 <p class="slider_card__text">Зарегистрируйтесь, или войдите в свой личный кабинет</p>
-                <div class="slider_card__btns focusable--btns">
-                  <button type="button" name="button" class="slider_card__btn">ВХОД</button>
-                  <button type="button" name="button" class="slider_card__btn">РЕГИСТРАЦИЯ</button>
+                <div class="slider_card__img slider_card__img--addaptive_version registration_card"></div>
+                <div class="slider_card__btns slider_registration__btns">
+                  <button type="button" name="button" class="slider_card__btn slider_registration__btn">ВХОД</button>
+                  <button type="button" name="button" class="slider_card__btn slider_registration__btn">РЕГИСТРАЦИЯ</button>
                 </div>
               </div>
             </div>
@@ -92,6 +93,7 @@
                 <p class="slider_card__text" id="search__text">
                     Введите в форму поиска модель нужного вам товара, или подберите его при помощи наших умных фильтров
                 </p>
+                <div class="slider_card__img slider_card__img--addaptive_version search_card"></div>
                 <div class="slider_card__btns focusable--btns" id="search__btns">
                   <button type="button" name="button" class="slider_card__btn" id="search__btn">НАЧАТЬ ПОДБОР</button>
                 </div>
@@ -108,6 +110,7 @@
                     Поздравляем, вы почти у цели. Ваша заявка отправлена нашим партнёрам, которые готовы предложить вам лучшую цену.
                     Вы можете видеть сколько продавцов выразили заинтересованность поторговаться, снижая цену на интересующий вас товар
                 </p>
+                <div class="slider_card__img slider_card__img--addaptive_version auction_card"></div>
                 <div class="slider_card__btns focusable--btns" id="search__btns">
                   <button type="button" name="button" class="slider_card__btn" id="search__btn">ЗАПУСТИТЬ АУКЦИОН</button>
                 </div>
@@ -124,6 +127,7 @@
                     Для запуска аукциона, вам нужно внести необходимую сумму, обычно это минимальная цена
                     на вашу модель, найденная в интернет-магазинах. После того как вы запустите аукцион, продавцы начнут торги
                 </p>
+                <div class="slider_card__img slider_card__img--addaptive_version paid_card"></div>
                 <div class="slider_card__btns focusable--btns" id="search__btns">
                   <button type="button" name="button" class="slider_card__btn" id="search__btn">МОИ ТОРГИ</button>
                 </div>
@@ -140,6 +144,7 @@
                     Ура!!! Торги завершились. Вы можете быть уверены, что купили свой товар по самой лучшей цене.
                     Вам остаётся только дождаться, когда вам привезут вашу покупку
                 </p>
+                <div class="slider_card__img slider_card__img--addaptive_version result_card"></div>
                 <div class="slider_card__btns focusable--btns" id="search__btns">
                   <button type="button" name="button" class="slider_card__btn" id="search__btn">МОИ ЗАКАЗЫ</button>
                 </div>
@@ -147,6 +152,11 @@
             </div>
           </div>
         </div>
+      </main>
+      <main class="yoof__ourpartners">
+        <main class="container ourpartners__container">
+          
+        </main>
       </main>
     </main>
   </section>
@@ -196,6 +206,7 @@
 <style src="./ComponentsStyles/header.css"></style>
 <style src="./ComponentsStyles/banner.css"></style>
 <style src="./ComponentsStyles/aboutSlider.css"></style>
+<style src="./ComponentsStyles/ourPartners.css"></style>
 
 <style>
     .yoof {

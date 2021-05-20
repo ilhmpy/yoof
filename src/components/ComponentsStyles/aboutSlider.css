@@ -189,6 +189,163 @@
   margin-bottom: 47px;
 }
 
+.slider_card__img--addaptive_version {
+  display: none;
+  width: 220px;
+  margin-bottom: 24px;
+  height: 240px;
+}
+
 @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
-  
+  .about_slider__arrow {
+    z-index: 9;
+  }
+}
+
+@media only screen and (max-device-width: 599px) {
+  .about_slider__text {
+    width: 100%;
+    height: 257px;
+    margin-bottom: 0;
+  }
+
+  .yoof__title {
+    width: 100%;
+    font-size: 1.50em;
+    max-width: 309px;
+  }
+
+  .about_slider__cards {
+    max-width: 330px;
+    height: 520px;
+  }
+
+  .yoof__about_slider {
+    height: 814px;
+  }
+
+  .about_slider__card {
+    display: block;
+    padding-top: 25px;
+    padding-left: 15px;
+  }
+
+  .slider_card__text_box {
+    padding-left: 0px;
+    height: inherit;
+  }
+
+  .slider_card__img {
+    display: none;
+  }
+
+  .slider_card__img--addaptive_version {
+    display: block;
+  }
+
+  .slider_card__text {
+    margin-bottom: 38px;
+  }
+
+  .registration_card {
+    background: url("../static/addaptive_registration_card.svg") center no-repeat;
+  }
+
+  .auction_card {
+    background: url("../static/addaptive_auction_card.svg") center no-repeat;
+  }
+
+  .result_card {
+    background: url("../static/addaptive_result_card.svg") center no-repeat;
+  }
+
+  .search_card {
+    background: url("../static/addaptive_search_card.svg") center no-repeat;
+  }
+
+  .paid_card {
+    background: url("../static/addaptive_paid_card.svg") center no-repeat;
+  }
+
+  .slider_registration__btns {
+    width: 100%;
+    background: 0;
+  }
+
+  .slider_registration__btn {
+    width: 140px;
+    border: 0;
+    border-radius: 10px;
+    background: #EBF005;
+    height: 40px;
+  }
+
+  .slider_card__btn:nth-child(1) {
+    border: 0;
+    width: 140px;
+    margin-right: 10px;
+  }
+
+  .about_slider__arrow {
+    z-index: 99;
+    width: 30px;
+    height: 30px;
+    margin-top: 242px;
+    font-size: .40em;
+  }
+
+  .about_slider__arrow:first-child {
+    margin-left: -7px;
+  }
+
+  .slider_card__btns  {
+    height: 40px;
+  }
+
+  .slider_card__img {
+    margin-bottom: 15px;
+  }
+
+  .registration_card {
+    margin-bottom: 37px;
+  }
+
+  .slider_card__text {
+    width: 44%;
+  }
+
+  .registration_card {
+    margin-bottom: 39px;
+  }
+
+  #auction__text {
+    width: 44%;
+    font-size: .55em;
+    margin-bottom: 20px;
+  }
+
+  #paid_text {
+    width: 44%;
+    font-size: .58em;
+    margin-bottom: 25px;
+  }
+
+  .slider_card__btns  {
+    margin-left: -5px;
+  }
+
+  #search__title {
+    margin-top: 25px;
+  }
+
+  .result_card {
+    margin-bottom: 27px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 480px) {
+  .yoof__title {
+    font-size: 1.50em;
+    width: 85%;
+  }
 }
