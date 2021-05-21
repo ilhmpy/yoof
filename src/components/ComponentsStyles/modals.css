@@ -1,0 +1,89 @@
+.black_bg {
+  width: 100%;
+  height: 3614px;
+  margin-top: 470px;
+  display: block;
+  z-index: 99999;
+  padding-top: 30px;
+  position: absolute;
+  background: rgba(0, 0, 0, 60%);
+}
+
+.modal__authorization {
+  width: 768px;
+  height: 938px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal__close {
+  cursor: pointer;
+  pointer-events: none;
+  user-select: none;
+  width: 30px;
+  height: 30px;
+  background: #EBF005;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.modal__close_times {
+  width: 15px;
+  height: 2px;
+  display: block;
+  margin-top: 14.2px;
+  margin-left: 8px;
+  transform: rotate(42deg);
+  background: #000;
+}
+
+.modal__close_times::before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  transform: rotate(95deg);
+  display: block;
+  background: #000;
+}
+
+.authorization__tabs_btns {
+  width: 420px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.tabs_btns__btn {
+  background: #fff;
+  width: 200px;
+  height: inherit;
+  border-radius: 10px;
+  border: 1px solid #EBF005;
+  font-weight: bold;
+  user-select: none;
+  font-size: .70em;
+}
+
+.tabs_btns__btn:nth-child(1) {
+  margin-right: 10px;
+}
+
+.activeTabsBtn {
+  background: #EBF005;
+}
+
+.activeTabsBtn:hover {
+  background: #EFF30A;
+}
+
+.activeTabsBtn:focus {
+  background: #FAFF00;
+}

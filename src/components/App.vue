@@ -1,5 +1,16 @@
 <template>
   <section class="yoof">
+    <section class="black_bg">
+      <div class="modal__authorization">
+        <div class="modal__close">
+          <span class="modal__close_times"></span>
+        </div>
+        <div class="authorization__tabs_btns">
+          <button type="button" name="button" class="tabs_btns__btn activeTabsBtn" data-tab="registration">РЕГИСТРАЦИЯ</button>
+          <button type="button" name="button" class="tabs_btns__btn" data-tab="enter">ВХОД</button>
+        </div>
+      </div>
+    </section>
     <header class="yoof__header">
       <header class="container header__container">
         <div class="header__nav_bar">
@@ -246,7 +257,21 @@
     </main>
     <footer class="yoof__footer">
       <footer class="container footer__container">
-        <img src="./static/logo--yellow.svg" alt="logo--yellow">
+        <img src="./static/logo--yellow.svg" alt="logo--yellow" class="footer__yellow_logo">
+        <div class="footer__links_box">
+          <ul class="footer__links">
+            <li class="footer__links_title">О СЕРВИСЕ</li>
+            <li class="footer__links_link"><a href="#">Как работает сервис?</a></li>
+            <li class="footer__links_link"><a href="#">Правила использования</a></li>
+            <li class="footer__links_link"><a href="#">Отзывы о нас</a></li>
+          </ul>
+          <ul class="footer__links">
+            <li class="footer__links_title">Контакты</li>
+            <li class="footer__links_link"><a href="#"><i class="fab fa-instagram"></i> INSTAGRAM</a></li>
+            <li class="footer__links_link"><a href="#"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+            <li class="footer__links_link"><a href="#"><i class="fab fa-telegram"></i> TELEGRAM</a></li>
+          </ul>
+        </div>
       </footer>
     </footer>
   </section>
@@ -266,6 +291,7 @@
     const move = countCards * width;
     const maxTranslate = -5200;
     const companiesCardsTruck = document.querySelector(".companies_cards__truck");
+    const tabsBtns = document.querySelectorAll(".tabs_btns__btn");
 
     let moveCompanies = false;
     let position = 0;
@@ -326,6 +352,13 @@
       document.removeEventListener("touchmove", touchMove);
       document.removeEventListener("touchend", touchEnd);
     };
+
+    document.querySelectorAll(".tabs_btns__btn").forEach(btn => btn.addEventListener("click", e => {
+      if (e.target.className == "tabs_btns__btn") {
+        tabsBtns.forEach(btn => btn.classList.remove("activeTabsBtn"));
+        e.target.classList.add("activeTabsBtn");
+      }
+    }));
   });
 </script>
 
@@ -334,6 +367,7 @@
 <style src="./ComponentsStyles/ourAdvantages.css"></style>
 <style src="./ComponentsStyles/ourPopularNews.css"></style>
 <style src="./ComponentsStyles/footer.css"></style>
+<style src="./ComponentsStyles/modals.css"></style>
 
 <style>
     .yoof {
