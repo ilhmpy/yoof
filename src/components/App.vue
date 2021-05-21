@@ -172,6 +172,83 @@
         </div>
       </main>
     </main>
+    <main class="yoof__our_advantages">
+      <main class="container our_advantages__container">
+        <div class="our_advantages__title_box">
+          <h1 class="our_advantages__title">ПРЕИМУЩЕСТВА СЕРВИСА</h1>
+          <p class="our_advantages__text">На нашем сервисе есть широкие возможности для покупателей и продавцов</p>
+        </div>
+        <div class="our_advantages__cards">
+          <div class="our_advantages__card">
+            <div class="our_advantages_card__img">
+              <img src="./static/time_advant_card.svg" alt="time">
+            </div>
+            <div class="our_advantages_card__content">
+              <h2 class="card_content__title">ЭКОНОМИЯ ВРЕМЕНИ</h2>
+              <p class="card_content__text">Вам не нужно тратить время на посещение магазинов в поиске нужного товара</p>
+            </div>
+          </div>
+          <div class="our_advantages__card">
+            <div class="our_advantages_card__img">
+              <img src="./static/money_advant_card.svg" alt="money">
+            </div>
+            <div class="our_advantages_card__content">
+              <h2 class="card_content__title">ЭКОНОМИЯ ДЕНЕГ</h2>
+              <p class="card_content__text">Вы приобретаете товар по минимальной цене</p>
+            </div>
+          </div>
+          <div class="our_advantages__card">
+            <div class="our_advantages_card__img">
+              <img src="./static/service_advant_card.svg" alt="service">
+            </div>
+            <div class="our_advantages_card__content">
+              <h2 class="card_content__title">ЧЕСТНЫЙ СЕРВИС</h2>
+              <p class="card_content__text">
+                Yoof – место, где покупатели знают, что сделанные им предложения абсолютно честны, и условия будут исполнены
+                магазинами так, как они это обещали
+              </p>
+            </div>
+          </div>
+          <div class="our_advantages__card">
+            <div class="our_advantages_card__img">
+              <img src="./static/care_advant_card.svg" alt="care">
+            </div>
+            <div class="our_advantages_card__content">
+              <h2 class="card_content__title">ЗАБОТА О КЛИЕНТАХ</h2>
+              <p class="card_content__text">
+                Мы стоим на стороне покупателей, и будем делать все, что в наших силах, для того,
+                чтобы покупатели были довольны.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </main>
+    <main class="yoof__our_popular_news">
+      <main class="container our_popular_news__container">
+        <div class="our_popular_news__title_box">
+          <h1 class="our_popular_news__title">ПОПУЛЯРНЫЕ НОВОСТИ</h1>
+          <p class="our_popular_news__text">Статьи, обзоры, новости рынка</p>
+        </div>
+        <div class="our_popular_news__cards">
+          <div class="our_popular_news__card">
+            <img src="./static/news1.svg" alt="news1">
+          </div>
+          <div class="our_popular_news__card">
+            <img src="./static/news2.svg" alt="news2">
+          </div>
+          <div class="our_popular_news__card">
+            <img src="./static/news3.svg" alt="news3">
+          </div>
+        </div>
+        <button type="button" name="button" class="our_popular_news__btn focusable--btns">ЧИТАТЬ ВСЕ НОВОСТИ</button>
+      </main>
+    </main>
+    <footer class="yoof__footer">
+      <footer class="container footer__container">
+        <img src="./static/logo--yellow.svg" alt="logo--yellow">
+      </footer>
+    </footer>
   </section>
 </template>
 
@@ -223,7 +300,7 @@
       };
     }));
 
-    document.addEventListener("touchstart", touchStart);
+    if (screen.width < 481) document.addEventListener("touchstart", touchStart);
 
     function touchMove(e) {
       if (moveCompanies) {
@@ -254,6 +331,9 @@
 
 <style src="normalize.css/normalize.css"></style>
 <style src="./ComponentsStyles/app.css"></style>
+<style src="./ComponentsStyles/ourAdvantages.css"></style>
+<style src="./ComponentsStyles/ourPopularNews.css"></style>
+<style src="./ComponentsStyles/footer.css"></style>
 
 <style>
     .yoof {

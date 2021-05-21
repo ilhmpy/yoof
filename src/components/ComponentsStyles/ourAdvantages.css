@@ -1,0 +1,151 @@
+.yoof__our_advantages {
+  width: 100%;
+  height: 500px;
+}
+
+.ourpartners__title {
+  width: 359px;
+}
+
+.our_advantages__container {
+  padding-top: 50px;
+}
+
+.our_advantages__title_box {
+  margin: 0 auto;
+  width: 70%;
+  display: block;
+  max-width: 854px;
+  text-align: center;
+}
+
+.our_advantages__title {
+  font-family: Oswald;
+  max-width: 537px;
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
+  margin-bottom: 28px;
+  border-bottom: 3px solid #EBF005;
+}
+
+.our_advantages__text {
+  font-weight: bold;
+  font-size: .70em;
+  margin-bottom: 70px;
+}
+
+.our_advantages__cards {
+  width: 100%;
+  height: 180px;
+  display: flex;
+}
+
+.our_advantages__card {
+  height: inherit;
+  width: 35%;
+  max-height: 180px;
+  margin-right: 60px;
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.our_advantages_card__img {
+  width: 100%;
+  height: 50px;
+}
+
+.our_advantages_card__img > img {
+  pointer-events: none;
+}
+
+.our_advantages_card__content {
+  height: 70px;
+  width: 100%;
+}
+
+.card_content__title {
+  font-size: .95em;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.card_content__text {
+  font-weight: 300;
+  font-size: .75em;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .our_advantages__cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
+  .our_advantages__title {
+    width: 104%;
+  }
+
+  .yoof__our_advantages {
+    height: 800px;
+  }
+
+  .our_advantages__card {
+    margin-right: 0px;
+    min-width: 238px;
+  }
+
+  .our_advantages__card:nth-child(1) {
+    margin-right: 62px;
+  }
+
+  .our_advantages__card:nth-child(3) {
+    margin-right: 62px;
+  }
+
+  .our_advantages__cards {
+    height: 505px;
+    width: 73%;
+    margin: 0 auto;
+  }
+}
+
+
+@media only screen and (max-device-width: 599px) {
+  .ourpartners__title {
+    max-width: 261px;
+  }
+
+  .our_advantages__title {
+    font-size: 1em;
+    width: 88%;
+    max-width: 270px;
+  }
+
+  .our_advantages__title_box {
+    width: 100%;
+  }
+
+  .yoof__our_advantages {
+    height: 1288px;
+  }
+
+  .our_advantages__cards {
+    height: 822px;
+    width: 75%;
+    max-width: 230px;
+    margin: 0 auto;
+  }
+
+  .our_advantages__card {
+    margin-top: 61px;
+  }
+
+  .our_advantages__card:last-child {
+    margin-top: 121px;
+  }
+
+  .our_advantages__card:nth-child(1) {
+    margin-top: 0px;
+  }
+}
