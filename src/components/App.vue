@@ -9,6 +9,54 @@
           <button type="button" name="button" class="tabs_btns__btn activeTabsBtn" data-tab="registration">РЕГИСТРАЦИЯ</button>
           <button type="button" name="button" class="tabs_btns__btn" data-tab="enter">ВХОД</button>
         </div>
+        <div class="authorization__tabs">
+          <div class="authorization__tab" data-tab="registration" id="registration_tab">
+            <h3 class="authorization_tab__title">ЗАРЕГИСТРИРОВАТЬСЯ КАК</h3>
+            <div class="autorization_tab__checkeds">
+              <div class="tab_checkeds__checked activeChecked" data-type="payer"><span></span>Покупатель</div>
+              <div class="tab_checkeds__checked" data-type="seller"><span></span> Продавец (юридическое лицо)</div>
+            </div>
+            <div class="authorization__registration_tabs">
+              <div class="registration_tabs__tab">
+                <div class="registration__row_inputs">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Фамилия</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Имя</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Отчество</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <div class="registration__row_inputs">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Телефон</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Адрес электронной почты</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <button type="button" name="button" class="registration__btn focusable--btns">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                <h3 class="registration__subtitle">Или авторизуйтесь через аккаунт в социальной сети</h3>
+                <p class="registration__socials">
+                  <img src="./static/google_socials.svg" alt="google">
+                  <img src="./static/vk_socials.svg" alt="vk">
+                  <img src="./static/facebook_socials.svg" alt="facebook">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <header class="yoof__header">
@@ -292,6 +340,7 @@
     const maxTranslate = -5200;
     const companiesCardsTruck = document.querySelector(".companies_cards__truck");
     const tabsBtns = document.querySelectorAll(".tabs_btns__btn");
+    const checkedBtns = document.querySelectorAll(".tab_checkeds__checked");
 
     let moveCompanies = false;
     let position = 0;
@@ -358,6 +407,13 @@
         tabsBtns.forEach(btn => btn.classList.remove("activeTabsBtn"));
         e.target.classList.add("activeTabsBtn");
       }
+    }));
+
+    document.querySelectorAll(".tab_checkeds__checked").forEach(checked => checked.addEventListener("click", e => {
+      if (e.target.className == "tab_checkeds__checked") {
+        checkedBtns.forEach(checked => checked.classList.remove('activeChecked'));
+        e.target.classList.add("activeChecked");
+      };
     }));
   });
 </script>
