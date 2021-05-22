@@ -57,7 +57,7 @@
               <div class="registration_tabs__tab" data-type="seller" style="display: none">
                 <div class="registration__row_inputs">
                   <div class="row_inputs__box">
-                    <label class="row_inputs__description">Название организации или ИП</label>
+                    <label class="row_inputs__description" id="description--addaptive">Название организации или ИП</label>
                     <input type="text" class="row_inputs__input">
                   </div>
                   <div class="row_inputs__box">
@@ -151,6 +151,30 @@
         </div>
       </div>
       <div class="modal__enter_email">
+        <div class="modal__close authorization__close">
+          <span class="modal__close_times"></span>
+        </div>
+        <h3 class="enter_email__title">ВВЕДИТЕ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</h3>
+        <div class="row_inputs__box enter_email__inputs_box">
+          <label class="row_inputs__description">Адрес электронной почты</label>
+          <input type="text" class="row_inputs__input">
+        </div>
+        <button type="button" name="button" class="registration__btn focusable--btns">ВОССТАНОВИТЬ ПАРОЛЬ</button>
+      </div>
+      <div class="modal__message_send_email">
+        <div class="modal__close authorization__close">
+          <span class="modal__close_times"></span>
+        </div>
+        <h3 class="enter_email__title message_send_email__title">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
+        <article class="message_send_email__massage_box">
+          <p>Мы отправили письмо со ссылкой для смены пароля на указанный Вами при регистрации адрес.</p>
+          <p>Для смены пароля перейдите по ссылке из письма и введите новый пароль.</p>
+        </article>
+      </div>
+      <div class="modal__change_password">
+        <div class="modal__close authorization__close">
+          <span class="modal__close_times"></span>
+        </div>
         
       </div>
     </section>
@@ -559,6 +583,11 @@
     document.querySelector(".authorization__close").addEventListener("click", e => {
       $.hide(".black_bg");
       $.hide(".modal__authorization");
+    });
+
+    document.querySelector(".nav_interface__authorization").addEventListener("click", e => {
+      $.show(".black_bg");
+      $.show(".modal__authorization");
     });
   });
 </script>

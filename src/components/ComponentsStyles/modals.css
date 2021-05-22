@@ -12,12 +12,13 @@
 
 .modal__authorization {
   width: 980px;
-  height: 908px;
+  min-height: 908px;
   margin: 0 auto;
   padding-top: 15px;
   padding-left: 10px;
+  padding-bottom: 10px;
   padding-right: 10px;
-  display: block;
+  display: none;
   background: #fff;
   border-radius: 10px;
   position: relative;
@@ -91,7 +92,6 @@
 
 .authorization__tabs {
   width: 100%;
-  height: 800px;
 }
 
 .authorization__tab {
@@ -155,7 +155,6 @@
 
 .authorization__registration_tabs {
   width: 100%;
-  height: 638px;
 }
 
 .registration_tabs__tab {
@@ -175,6 +174,7 @@
 .row_inputs__box {
   width: 260px;
   height: inherit;
+  max-height: 100px;
 }
 
 .row_inputs__box:nth-child(1) {
@@ -249,12 +249,10 @@
 
 .authorization__enter_tabs {
   width: 100%;
-  height: 638px;
 }
 
 .authorization__enter_tab {
   width: 100%;
-  height: 100%;
   padding-top: 80px;
 }
 
@@ -262,6 +260,211 @@
   width: 539px;
 }
 
+.modal__enter_email {
+  width: 100%;
+  max-width: 980px;
+  height: 576px;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  padding: 15px;
+  display: none;
+}
+
+.enter_email__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  margin-top: 110px;
+  margin-bottom: 60px;
+}
+
+.enter_email__inputs_box {
+  margin: 0 auto;
+  margin-bottom: 0px;
+}
+
+.modal__message_send_email {
+  position: relative;
+  width: 80%;
+  max-width: 980px;
+  height: 576px;
+  background: #fff;
+  margin: 0 auto;
+  display: none;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.message_send_email__massage_box {
+  width: 60%;
+  max-width: 674px;
+  height: 226px;
+  margin: 0 auto;
+  border: 1px solid #EBF005;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.message_send_email__massage_box > p {
+  font-weight: 500;
+  font-size: .80em;
+}
+
+.modal__change_password {
+  width: 100%;
+  max-width: 980px;
+  height: 576px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
-  
+  .modal__authorization {
+    width: 768px;
+    height: 938px;
+  }
+
+  .registration__row_inputs {
+    width: 693px;
+  }
+
+  .row_inputs__box {
+    width: 220px;
+  }
+
+  .row_inputs__input {
+    min-width: 220px;
+  }
+
+  #description--addaptive {
+    font-size: .62em;
+  }
+
+  .enter__tabs_rows {
+    width: 481px;
+  }
+
+  .black_bg {
+    height: 3984px;
+  }
+}
+
+@media only screen and (max-device-width: 599px) {
+  .modal__authorization {
+    width: 100%;
+    max-width: 375px;
+  }
+
+  .registration__row_inputs {
+    display: block;
+    height: 344px;
+    width: 100%;
+    max-width: 262px;
+  }
+
+  .autorization_tab__checkeds {
+    width: 100%;
+    display: block;
+  }
+
+  .tabs_btns__btn {
+    max-width: 160px;
+    width: 46%;
+  }
+
+  .authorization__tabs_btns {
+    width: 100%;
+    max-width: 337px;
+  }
+
+  .tab_checkeds__checked {
+    margin-bottom: 10px;
+  }
+
+  .row_inputs__box {
+    margin-top: 26px;
+    margin-right: 0;
+  }
+
+  .row_inputs__box:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .row_inputs__box:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .registration_tabs__tab  {
+    padding-top: 20px;
+  }
+
+  .registration__btn {
+    margin-top: 31px;
+    margin-bottom: 58px;
+  }
+
+  .black_bg {
+    height: 4907px;
+  }
+
+  .enter__tabs_rows {
+    height: 224px;
+    margin-bottom: 20px;
+  }
+
+  .authorization__enter_tab  {
+    padding-top: 14px;
+  }
+
+  .modal__enter_email {
+    max-width: 375px;
+    height: 463px;
+  }
+
+  .enter_email__title {
+    margin-top: 60px;
+    width: 65%;
+    max-width: 255px;
+    margin: 0 auto;
+    margin-top: 58px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .enter_email__inputs_box {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .modal__message_send_email {
+    width: 100%;
+    max-width: 375px;
+    height: 501px;
+  }
+
+  .message_send_email__massage_box {
+    width: 100%;
+    max-width: 325px;
+  }
+
+  .message_send_email__massage_box > p {
+    font-size: .70em;
+    margin-bottom: 30px;
+  }
+
+  .message_send_email__title {
+    margin-top: 81px;
+    width: 100%;
+    font-size: .80em;
+    margin-bottom: 50px;
+  }
 }
