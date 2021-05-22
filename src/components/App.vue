@@ -115,7 +115,7 @@
                     <input type="text" class="row_inputs__input">
                   </div>
                   <div class="row_inputs__box">
-                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <label class="row_inputs__description">Пароль <span class="description__forgot js_show_modal">Забыли пароль?</span></label>
                     <input type="text" class="row_inputs__input">
                   </div>
                 </div>
@@ -134,7 +134,7 @@
                     <input type="text" class="row_inputs__input">
                   </div>
                   <div class="row_inputs__box">
-                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <label class="row_inputs__description">Пароль <span class="description__forgot js_show_modal">Забыли пароль?</span></label>
                     <input type="text" class="row_inputs__input">
                   </div>
                 </div>
@@ -151,7 +151,7 @@
         </div>
       </div>
       <div class="modal__enter_email">
-        <div class="modal__close authorization__close">
+        <div class="modal__close authorization__close recovery__closes">
           <span class="modal__close_times"></span>
         </div>
         <h3 class="enter_email__title">ВВЕДИТЕ АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ</h3>
@@ -159,10 +159,10 @@
           <label class="row_inputs__description">Адрес электронной почты</label>
           <input type="text" class="row_inputs__input">
         </div>
-        <button type="button" name="button" class="registration__btn focusable--btns">ВОССТАНОВИТЬ ПАРОЛЬ</button>
+        <button type="button" name="button" class="registration__btn focusable--btns recovery_password__btn">ВОССТАНОВИТЬ ПАРОЛЬ</button>
       </div>
       <div class="modal__message_send_email">
-        <div class="modal__close authorization__close">
+        <div class="modal__close authorization__close recovery__closes">
           <span class="modal__close_times"></span>
         </div>
         <h3 class="enter_email__title message_send_email__title">ВОССТАНОВЛЕНИЕ ПАРОЛЯ</h3>
@@ -172,10 +172,19 @@
         </article>
       </div>
       <div class="modal__change_password">
-        <div class="modal__close authorization__close">
+        <div class="modal__close authorization__close change_password__close">
           <span class="modal__close_times"></span>
         </div>
-        
+        <h3 class="enter_email__title change_password__title">ИЗМЕНИТЕ ПАРОЛЬ</h3>
+        <div class="row_inputs__box enter_email__inputs_box change_password__input_box">
+          <label class="row_inputs__description">Новый пароль</label>
+          <input type="text" class="row_inputs__input">
+        </div>
+        <div class="row_inputs__box enter_email__inputs_box">
+          <label class="row_inputs__description">Подтвердите пароль</label>
+          <input type="text" class="row_inputs__input">
+        </div>
+        <button type="button" name="button" class="registration__btn focusable--btns">СОХРАНИТЬ И ВОЙТИ</button>
       </div>
     </section>
     <header class="yoof__header">
@@ -589,6 +598,27 @@
       $.show(".black_bg");
       $.show(".modal__authorization");
     });
+
+    document.querySelectorAll(".js_show_modal").forEach(btn => btn.addEventListener("click", e => {
+      $.hide(".modal__authorization");
+      $.show(".modal__enter_email");
+    }));
+
+    document.querySelector(".recovery_password__btn").addEventListener("click", e => {
+      $.hide(".modal__enter_email");
+      $.show(".modal__message_send_email");
+    });
+
+    document.querySelector(".change_password__close").addEventListener("click", e => {
+      $.hide(".modal__change_password");
+      $.hide(".black_bg");
+    });
+
+    document.querySelectorAll(".recovery__closes").forEach(item => item.addEventListener("click", e => {
+      $.hide(".modal__message_send_email");
+      $.hide('.modal__enter_email');
+      $.show(".modal__authorization");
+    }));
   });
 </script>
 
