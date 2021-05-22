@@ -17,6 +17,7 @@
   padding-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  display: block;
   background: #fff;
   border-radius: 10px;
   position: relative;
@@ -24,7 +25,6 @@
 
 .modal__close {
   cursor: pointer;
-  pointer-events: none;
   user-select: none;
   width: 30px;
   height: 30px;
@@ -122,7 +122,12 @@
   grid-gap: 10px;
   user-select: none;
   cursor: pointer;
+  font-size: .60em;
   margin-right: 20px;
+}
+
+.tab_checkeds__checked:nth-child(1) {
+  margin-right: 66px;
 }
 
 .tab_checkeds__checked > span {
@@ -240,4 +245,23 @@
 
 .registration__socials > img {
   margin-right: 20px;
+}
+
+.authorization__enter_tabs {
+  width: 100%;
+  height: 638px;
+}
+
+.authorization__enter_tab {
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+}
+
+.enter__tabs_rows {
+  width: 539px;
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
+  
 }

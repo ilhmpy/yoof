@@ -2,7 +2,7 @@
   <section class="yoof">
     <section class="black_bg">
       <div class="modal__authorization">
-        <div class="modal__close">
+        <div class="modal__close authorization__close">
           <span class="modal__close_times"></span>
         </div>
         <div class="authorization__tabs_btns">
@@ -17,7 +17,7 @@
               <div class="tab_checkeds__checked" data-type="seller"><span></span> Продавец (юридическое лицо)</div>
             </div>
             <div class="authorization__registration_tabs">
-              <div class="registration_tabs__tab">
+              <div class="registration_tabs__tab" data-type="payer">
                 <div class="registration__row_inputs">
                   <div class="row_inputs__box">
                     <label class="row_inputs__description">Фамилия</label>
@@ -54,9 +54,104 @@
                   <img src="./static/facebook_socials.svg" alt="facebook">
                 </p>
               </div>
+              <div class="registration_tabs__tab" data-type="seller" style="display: none">
+                <div class="registration__row_inputs">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Название организации или ИП</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Юридический адрес</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">ИНН</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <div class="registration__row_inputs">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Банк</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Расчетный счет</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">КПП</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <div class="registration__row_inputs">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">БИК банка</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Адрес электронной почты</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <button type="button" name="button" class="registration__btn focusable--btns">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+              </div>
+            </div>
+          </div>
+          <div class="authorization__tab" data-tab="enter" style="display: none">
+            <h3 class="authorization_tab__title">ВОЙТИ КАК</h3>
+            <div class="autorization_tab__checkeds">
+              <div class="tab_checkeds__checked activeChecked" data-type="enter-payer"><span></span>Покупатель</div>
+              <div class="tab_checkeds__checked" data-type="enter-seller"><span></span> Продавец (юридическое лицо)</div>
+            </div>
+            <div class="authorization__enter_tabs">
+              <div class="authorization__enter_tab" data-type="enter-payer">
+                <div class="registration__row_inputs enter__tabs_rows">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Адрес электронной почты</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <button type="button" name="button" class="registration__btn focusable--btns">ВОЙТИ</button>
+                <h3 class="registration__subtitle">Или авторизуйтесь через аккаунт в социальной сети</h3>
+                <p class="registration__socials">
+                  <img src="./static/google_socials.svg" alt="google">
+                  <img src="./static/vk_socials.svg" alt="vk">
+                  <img src="./static/facebook_socials.svg" alt="facebook">
+                </p>
+              </div>
+              <div class="authorization__enter_tab" data-type="enter-seller" style="display: none">
+                <div class="registration__row_inputs enter__tabs_rows">
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Адрес электронной почты</label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                  <div class="row_inputs__box">
+                    <label class="row_inputs__description">Пароль <span class="description__forgot">Забыли пароль?</span></label>
+                    <input type="text" class="row_inputs__input">
+                  </div>
+                </div>
+                <button type="button" name="button" class="registration__btn focusable--btns">ВОЙТИ</button>
+                <h3 class="registration__subtitle">Или авторизуйтесь через аккаунт в социальной сети</h3>
+                <p class="registration__socials">
+                  <img src="./static/google_socials.svg" alt="google">
+                  <img src="./static/vk_socials.svg" alt="vk">
+                  <img src="./static/facebook_socials.svg" alt="facebook">
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal__enter_email">
+        
       </div>
     </section>
     <header class="yoof__header">
@@ -341,6 +436,9 @@
     const companiesCardsTruck = document.querySelector(".companies_cards__truck");
     const tabsBtns = document.querySelectorAll(".tabs_btns__btn");
     const checkedBtns = document.querySelectorAll(".tab_checkeds__checked");
+    const checkedTabs = document.querySelectorAll(".registration_tabs__tab");
+    const authorizationTabs = document.querySelectorAll(".authorization__tab");
+    const enterTabs = document.querySelectorAll(".authorization__enter_tab");
 
     let moveCompanies = false;
     let position = 0;
@@ -352,6 +450,35 @@
     let regPx = /[-0-9.]+(?=px)/;
 
     companiesCardsTruck.style.transform = "translate3d(0px, 0px, 0px)";
+
+    class DOM {
+      show(selector) {
+        if (typeof selector == "string") {
+          document.querySelectorAll(selector).forEach(sel => sel.style.display = "block")
+        } else selector.style.display = "block";
+      };
+
+      hide(selector) {
+        if (typeof selector == "string") document.querySelectorAll(selector).forEach(sel => sel.style.display = "none");
+        else selector.style.display = "none";
+      };
+
+      addClass(selector, className) {
+        if (typeof selector == "string") document.querySelectorAll(selector).forEach(item => item.classList.add(className))
+        else selector.classList.add(className);
+      };
+
+      removeClass(selector, className) {
+        if (typeof selector == "string") document.querySelectorAll(selector).forEach(item => item.classList.remove(className))
+        else selector.classList.remove(className)
+      };
+
+      css(selector, object = {}) {
+        selector.style = object;
+      };
+    };
+
+    const $ = new DOM();
 
     function translate() {
       if (position === maxTranslate) {
@@ -404,17 +531,35 @@
 
     document.querySelectorAll(".tabs_btns__btn").forEach(btn => btn.addEventListener("click", e => {
       if (e.target.className == "tabs_btns__btn") {
-        tabsBtns.forEach(btn => btn.classList.remove("activeTabsBtn"));
-        e.target.classList.add("activeTabsBtn");
-      }
+        tabsBtns.forEach(btn => $.removeClass(btn, "activeTabsBtn"));
+        $.addClass(e.target, "activeTabsBtn");
+        authorizationTabs.forEach(tab => {
+          $.hide(tab);
+          if (tab.dataset.tab == e.target.dataset.tab) $.show(tab);
+        });
+      };
     }));
 
     document.querySelectorAll(".tab_checkeds__checked").forEach(checked => checked.addEventListener("click", e => {
       if (e.target.className == "tab_checkeds__checked") {
         checkedBtns.forEach(checked => checked.classList.remove('activeChecked'));
         e.target.classList.add("activeChecked");
+        checkedTabs.forEach(tab => {
+          $.hide(tab);
+          if (tab.dataset.type == e.target.dataset.type) $.show(tab);
+        });
+
+        enterTabs.forEach(tab => {
+          $.hide(tab);
+          if (tab.dataset.type == e.target.dataset.type) $.show(tab);
+        });
       };
     }));
+
+    document.querySelector(".authorization__close").addEventListener("click", e => {
+      $.hide(".black_bg");
+      $.hide(".modal__authorization");
+    });
   });
 </script>
 
